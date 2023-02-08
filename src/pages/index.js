@@ -26,22 +26,8 @@ export default function Home({ allPostsData }) {
           </div>
           <div>
             <h3 className="text-xl">Featured post</h3>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
+            <p>{allPostsData[0].title}</p>
+            <small>{allPostsData[0].date}</small>
           </div>
           <div>
             <div className="grid xs:grid-cols-3">
@@ -57,8 +43,15 @@ export default function Home({ allPostsData }) {
               </ul>
             </div>
             <div className="grid xs:grid-cols-2">
-              <h3 className="text-xl">YouTube</h3>
-              <h3 className="text-xl">Twitch</h3>
+              <Link
+                className="text-xl"
+                href="https://www.youtube.com/@TSBOGaming"
+              >
+                YouTube
+              </Link>
+              <Link className="text-xl" href="https://www.twitch.tv/tsbogaming">
+                Twitch
+              </Link>
               <p>The YouTube Channel!</p>
               <p>The Twitch Channel!</p>
             </div>
@@ -69,7 +62,7 @@ export default function Home({ allPostsData }) {
             <h2>Blog</h2>
             <div>
               <ul className="p-4 max-w-5xl gap-2 grid xs:grid-cols-2">
-                {allPostsData.map(({ id, date, title, slug }) => (
+                {allPostsData.map(({ id, date, title }) => (
                   <li key="{title}">
                     <Link href={`/posts/${id}`}>{title}</Link>
                     <br />
