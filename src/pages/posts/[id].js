@@ -27,13 +27,13 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <section>
-        <h1>{postData.title}</h1>
-        <div>
+      <div className="grid place-items-center p-4 gap-2">
+        <h1 className="text-2xl">{postData.title}</h1>
+        <small>
           <Date dateString={postData.date} />
-        </div>
+        </small>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </section>
+      </div>
     </>
   )
 }

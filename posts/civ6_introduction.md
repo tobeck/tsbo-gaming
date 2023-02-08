@@ -1,8 +1,7 @@
 ---
-title: 'civ6_introduction'
-date: '2023-02-03'
+title: 'Introduction to Civilization 6 Gameplay Mechanics'
+date: '2023-02-10'
 slug: 'civ6_intro_slug'
-tags: 'Civ6, Tutorial'
 ---
 
 # Introduction to Civilization 6 Gameplay Mechanics

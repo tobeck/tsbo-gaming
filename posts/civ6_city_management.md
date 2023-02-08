@@ -1,8 +1,7 @@
 ---
-title: 'civ6_city_management'
+title: 'The Basics of City Management and Growth in Civilization 6'
 date: '2023-02-03'
 slug: 'civ6_city_management_slug'
-tags: 'Civ6, Tutorial'
 ---
 
 # The Basics of City Management and Growth in Civilization 6
@@ -24,7 +23,6 @@ In addition to your standard population, you'll also have the opportunity to rec
 ## City Management Strategies
 
 Managing a city in Civilization 6 can be challenging, but with a few key strategies, you can keep your city running smoothly and expanding effectively. Here are a few tips to get you started:
-
 Focus on food and production early on to ensure that your population is growing and that you have the resources you need to build and expand.
 Make use of specialists and great people to provide bonuses and abilities that can help your city grow.
 Pay attention to terrain and resources when choosing where to expand your city.
