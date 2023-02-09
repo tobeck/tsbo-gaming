@@ -1,5 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { faYoutube, faTwitch } from '@fortawesome/free-brands-svg-icons'
+
 import Date from '../components/date'
 import { getSortedPostsData } from '../lib/posts'
 
@@ -19,19 +24,21 @@ export default function Home({ allPostsData }) {
         <title>TSBO Gaming</title>
       </Head>
       <div className="grid place-items-center min-h-screen">
-        <div className="p-4 max-w-5xl gap-2 grid xs:grid-cols-2">
-          <div className="xs:col-span-2">
-            <h1 className="text-4xl font-extrabold">TSBO</h1>
-            <h2 className="text-xl">Strategy Gaming</h2>
+        <div className="grid xs:grid-cols-2">
+          <div className="xs:col-span-2 bg-hero_bg_image h-[300px]">
+            <h1 className="text-4xl font-extrabold text-golden">TSBO Gaming</h1>
+            <h2 className="text-golden">Strategy and Survival Gaming</h2>
           </div>
-          <div>
+          <div className="bg-parchment_bg text-text_on_parchment">
             <h3 className="text-xl">Featured post</h3>
             <p>{allPostsData[0].title}</p>
-            <small>{allPostsData[0].date}</small>
+            <small>
+              <Date dateString={allPostsData[0].date.toString()} />
+            </small>
           </div>
           <div>
-            <div className="grid xs:grid-cols-3">
-              <h3 className="text-xl">Let's Play</h3>
+            <div className="grid xs:grid-cols-3 bg-brown_bg text-text_on_brown">
+              <h3 className="text-xl ">Let's Play</h3>
               <h3 className="text-xl">Reviews</h3>
               <h3 className="text-xl">Tutorials</h3>
               <p>Let's play some games!</p>
@@ -42,36 +49,19 @@ export default function Home({ allPostsData }) {
                 <li>Distant World 2</li>
               </ul>
             </div>
-            <div className="grid xs:grid-cols-2">
+            <div className="grid xs:grid-cols-2 bg-brown_bg text-text_on_brown">
               <Link
-                className="text-xl"
+                className="place-items-center fa-5x"
                 href="https://www.youtube.com/@TSBOGaming"
               >
-                YouTube
+                <FontAwesomeIcon icon={faYoutube} />
               </Link>
-              <Link className="text-xl" href="https://www.twitch.tv/tsbogaming">
-                Twitch
+              <Link
+                className="place-items-center fa-5x"
+                href="https://www.twitch.tv/tsbogaming"
+              >
+                <FontAwesomeIcon icon={faTwitch} />
               </Link>
-              <p>The YouTube Channel!</p>
-              <p>The Twitch Channel!</p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div className="grid place-items-center">
-            <h2>Blog</h2>
-            <div>
-              <ul className="p-4 max-w-5xl gap-2 grid xs:grid-cols-2">
-                {allPostsData.map(({ id, date, title }) => (
-                  <li key="{title}">
-                    <Link href={`/posts/${id}`}>{title}</Link>
-                    <br />
-                    <small>
-                      <Date dateString={date} />
-                    </small>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
