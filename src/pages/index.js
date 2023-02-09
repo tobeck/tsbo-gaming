@@ -37,11 +37,11 @@ export default function Home({ allPostsData }) {
             </small>
           </div>
           <div>
-            <div className="grid xs:grid-cols-3 bg-brown_bg text-text_on_brown">
-              <h3 className="text-xl ">Let's Play</h3>
+            <div className="grid xs:grid-cols-3 bg-gradient-to-r from-brown_grad_from to-brown_grad_to text-text_on_brown">
+              <h3 className="text-xl">Let&apos;s Play</h3>
               <h3 className="text-xl">Reviews</h3>
               <h3 className="text-xl">Tutorials</h3>
-              <p>Let's play some games!</p>
+              <p>Let&apos;s play some games!</p>
               <p>Reviews for games</p>
               <ul>
                 <li>Civilization 6</li>
