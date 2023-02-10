@@ -37,7 +37,7 @@ export default function Home({ allPostsData }) {
             </small>
           </div>
           <div>
-            <div className="grid xs:grid-cols-3 bg-gradient-to-r from-brown_grad_from to-brown_grad_to text-text_on_brown">
+            <div className="grid xs:grid-cols-3 bg-gradient-to-tl from-brown_grad_from to-brown_grad_to text-text_on_brown">
               <h3 className="text-xl">Let&apos;s Play</h3>
               <h3 className="text-xl">Reviews</h3>
               <h3 className="text-xl">Tutorials</h3>
@@ -49,7 +49,7 @@ export default function Home({ allPostsData }) {
                 <li>Distant World 2</li>
               </ul>
             </div>
-            <div className="grid xs:grid-cols-2 bg-brown_bg text-text_on_brown">
+            <div className="grid xs:grid-cols-2 bg-gradient-to-bl from-brown_grad_from to-brown_grad_to text-text_on_brown">
               <Link
                 className="place-items-center fa-5x"
                 href="https://www.youtube.com/@TSBOGaming"
